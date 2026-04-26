@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  
+  --color-primary: #f97316; /* Orange-500 */
+  --color-primary-dark: #ea580c; /* Orange-600 */
+  --color-bg-dark: #0a0a0a;
+  --color-card-dark: #171513;
+  --color-border-dark: #2a2624;
+}
+
+@layer base {
+  body {
+    @apply bg-bg-dark text-white font-sans;
+  }
+}
+
+.custom-card {
+  @apply bg-card-dark border border-border-dark rounded-xl p-6 shadow-2xl;
+}
+
+.orange-gradient {
+  background: linear-gradient(to bottom, #f97316, #ea580c);
+}
+
+.dark-gradient {
+  background: linear-gradient(180deg, #171513 0%, #0a0a0a 100%);
+}

@@ -1,6 +1,6 @@
 {
   "name": "Gokul Snacks Tracker",
-  "description": "Dealership expense and inventory tracker for Mayur, Suhail, and Rahul.",
+  "description": "A dealership expense tracker for Gokul Snacks with daily expense logging and summaries.",
   "requestFramePermissions": [],
   "majorCapabilities": []
 }
