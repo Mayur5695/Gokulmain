@@ -53,9 +53,9 @@ export default function App() {
         {/* Summary Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
           {[
-            { label: 'एकूण खर्च', value: '₹0', sub: 'All time', color: 'text-stone-100' },
-            { label: 'या महिन्यातील', value: '₹0', sub: 'एप्रिल २०२६', color: 'text-stone-100' },
-            { label: 'INVENTORY खर्च', value: '₹0', sub: 'All time', color: 'text-blue-400' },
+            { label: 'à¤à¤•à¥‚à¤£ à¤–à¤°à¥à¤š', value: 'â‚¹0', sub: 'All time', color: 'text-stone-100' },
+            { label: 'à¤¯à¤¾ à¤®à¤¹à¤¿à¤¨à¥à¤¯à¤¾à¤¤à¥€à¤²', value: 'â‚¹0', sub: 'à¤à¤ªà¥à¤°à¤¿à¤² à¥¨à¥¦à¥¨à¥¬', color: 'text-stone-100' },
+            { label: 'INVENTORY à¤–à¤°à¥à¤š', value: 'â‚¹0', sub: 'All time', color: 'text-blue-400' },
           ].map((card, idx) => (
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
@@ -78,22 +78,22 @@ export default function App() {
         <div className="flex flex-wrap items-center gap-4 mb-10">
           <button className="flex items-center gap-2 px-6 py-3 rounded-2xl orange-gradient text-white font-bold shadow-lg shadow-primary/20 hover:scale-105 transition-transform">
             <Plus size={20} />
-            <span>खर्च नोंद</span>
+            <span>à¤–à¤°à¥à¤š à¤¨à¥‹à¤‚à¤¦</span>
           </button>
           
           <button className="flex items-center gap-2 px-6 py-3 rounded-2xl bg-stone-900 border border-stone-800 text-stone-400 font-bold hover:bg-stone-800 transition-colors">
             <FileText size={18} />
-            <span>सर्व खर्च</span>
+            <span>à¤¸à¤°à¥à¤µ à¤–à¤°à¥à¤š</span>
           </button>
 
           <button className="flex items-center gap-2 px-6 py-3 rounded-2xl bg-stone-900 border border-stone-800 text-stone-400 font-bold hover:bg-stone-800 transition-colors">
             <Home size={18} />
-            <span>Fixed खर्च</span>
+            <span>Fixed à¤–à¤°à¥à¤š</span>
           </button>
 
           <button className="flex items-center gap-2 px-6 py-3 rounded-2xl bg-stone-900 border border-stone-800 text-stone-400 font-bold hover:bg-stone-800 transition-colors">
             <BarChart3 size={18} />
-            <span>सारांश</span>
+            <span>à¤¸à¤¾à¤°à¤¾à¤‚à¤¶</span>
           </button>
         </div>
 
@@ -104,13 +104,13 @@ export default function App() {
           transition={{ delay: 0.4 }}
           className="custom-card max-w-4xl border-stone-800/50 bg-[#121110]"
         >
-          <h3 className="text-primary font-display font-bold text-xl mb-8">नवीन खर्च नोंदवा</h3>
+          <h3 className="text-orange-500 font-display font-bold text-xl mb-8">à¤¨à¤µà¥€à¤¨ à¤–à¤°à¥à¤š à¤¨à¥‹à¤‚à¤¦à¤µà¤¾</h3>
           
           <form className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6" onSubmit={(e) => e.preventDefault()}>
             {/* Date */}
             <div className="space-y-2">
               <label className="text-[11px] uppercase tracking-wider text-stone-500 font-semibold flex items-center gap-1.5">
-                खर्चाची तारीख
+                à¤–à¤°à¥à¤šà¤¾à¤šà¥€ à¤¤à¤¾à¤°à¥€à¤–
               </label>
               <div className="relative group">
                 <input 
@@ -125,7 +125,7 @@ export default function App() {
             {/* Expense Type */}
             <div className="space-y-2">
               <label className="text-[11px] uppercase tracking-wider text-stone-500 font-semibold">
-                खर्चाचा प्रकार
+                à¤–à¤°à¥à¤šà¤¾à¤šà¤¾ à¤ªà¥à¤°à¤•à¤¾à¤°
               </label>
               <div className="relative">
                 <select 
@@ -133,7 +133,7 @@ export default function App() {
                   onChange={(e) => setExpenseType(e.target.value)}
                   className="w-full bg-[#0a0a0a] border border-stone-800 rounded-xl px-4 py-3 outline-none focus:border-primary/50 text-stone-300 transition-all appearance-none cursor-pointer"
                 >
-                  <option value="">-- प्रकार निवडा --</option>
+                  <option value="">-- à¤ªà¥à¤°à¤•à¤¾à¤° à¤¨à¤¿à¤µà¤¡à¤¾ --</option>
                   <option value="inventory">Inventory</option>
                   <option value="salary">Salary</option>
                   <option value="rent">Rent</option>
@@ -146,7 +146,7 @@ export default function App() {
             {/* Amount */}
             <div className="space-y-2">
               <label className="text-[11px] uppercase tracking-wider text-stone-500 font-semibold">
-                रक्कम (₹)
+                à¤°à¤•à¥à¤•à¤® (â‚¹)
               </label>
               <input 
                 type="number" 
@@ -158,7 +158,7 @@ export default function App() {
             {/* Partner */}
             <div className="space-y-2">
               <label className="text-[11px] uppercase tracking-wider text-stone-500 font-semibold">
-                कोणी दिले (PARTNER)
+                à¤•à¥‹à¤£à¥€ à¤¦à¤¿à¤²à¥‡ (PARTNER)
               </label>
               <div className="relative">
                 <select 
@@ -177,11 +177,11 @@ export default function App() {
             {/* Notes */}
             <div className="md:col-span-2 space-y-2">
               <label className="text-[11px] uppercase tracking-wider text-stone-500 font-semibold">
-                तपशील / नोट्स
+                à¤¤à¤ªà¤¶à¥€à¤² / à¤¨à¥‹à¤Ÿà¥à¤¸
               </label>
               <textarea 
                 rows={4}
-                placeholder="उदा. March rent paid, 10 bags Bhujia order..."
+                placeholder="à¤‰à¤¦à¤¾. March rent paid, 10 bags Bhujia order..."
                 className="w-full bg-[#0a0a0a] border border-stone-800 rounded-xl px-4 py-3 outline-none focus:border-primary/50 text-stone-300 transition-all resize-none"
               ></textarea>
             </div>
@@ -192,7 +192,7 @@ export default function App() {
                 className="flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl orange-gradient text-white font-bold shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-[0.98] transition-all w-full md:w-auto"
               >
                 <CheckSquare size={18} />
-                <span>खर्च नोंदवा</span>
+                <span>à¤–à¤°à¥à¤š à¤¨à¥‹à¤‚à¤¦à¤µà¤¾</span>
               </button>
             </div>
           </form>
