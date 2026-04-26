@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-saffron: #FF6B00;
+  --color-saffron-light: #FF8C35;
+  --color-gold: #FFB700;
+  --color-dark: #1A0A00;
+  --color-card: #2A1500;
+  --color-card-dark: #1F1000;
+  --color-text-main: #FFE8C8;
+  --color-muted-main: #A07050;
+  --color-border-main: #3D2000;
+
+  --font-baloo: "Baloo 2", cursive;
+  --font-noto: "Noto Sans Devanagari", sans-serif;
+}
+
+:root {
+  background: var(--color-dark);
+  color: var(--color-text-main);
+  font-family: var(--font-baloo);
+}
+
+@layer base {
+  body {
+    @apply min-h-screen bg-[#1A0A00];
+    background-image: radial-gradient(ellipse at top left, #3A1500 0%, #1A0A00 50%);
+  }
+}
